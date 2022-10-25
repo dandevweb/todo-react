@@ -1,0 +1,61 @@
+.content>header {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info:nth-child(1) h3 {
+    color: var(--blue);
+}
+
+.info:nth-child(2) h3 {
+    color: var(--purple);
+}
+
+.counter {
+    background: var(--gray-400);
+    width: 25px;
+    height: 19px;
+    border-radius: 999px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter span {
+    color: var(--gray-200);
+    font-size: .75rem;
+    font-weight: 700;
+
+}
+
+.tasksEmpty {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray-400);
+    border-radius: .5rem;
+}
+
+.tasksEmptyContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15.25rem;
+    color: var(--gray-300);
+}
+
+.tasksEmptyContent img {
+    max-width: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.tasksEmptyContent strong {
+    margin-bottom: .2rem;
+}
