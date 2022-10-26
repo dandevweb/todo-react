@@ -10,9 +10,15 @@
 
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     padding: 1rem;
     gap: 12px;
     margin-bottom: .75rem;
+}
+
+.checkContent {
+    display: flex;
+    gap: 2rem;
 }
 
 .taskSingle input[type=checkbox] {
