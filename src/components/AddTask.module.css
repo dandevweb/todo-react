@@ -9,16 +9,18 @@
     width: 39.875rem;
     height: 3.375rem;
     background: var(--gray-500);
-    color: var(--gray-300);
+    color: var(--gray-100);
     border: 1px solid var(--gray-700);
     border-radius: .5rem;
     padding-left: 1rem;
 }
 
+.content input::placeholder {
+    color: var(--gray-300);
+}
+
 .content button {
     cursor: pointer;
-    font-weight: 700;
-    font-size: .875rem;
     width: 5.625rem;
     height: 3.375rem;
     border: 1px solid transparent;
@@ -29,12 +31,26 @@
 
     transition: background .3s;
 
+    position: relative;
+
 }
 
 .content button:hover {
     background: var(--blue);
 }
 
+button strong {
+    font-size: .875rem;
+    position: absolute;
+    left: calc(50% - 10px);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 button .icon {
-    margin-left: 8px;
+    position: absolute;
+    left: calc(50% + 20px);
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

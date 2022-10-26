@@ -1,31 +1,40 @@
+import { Trash } from 'phosphor-react';
 import styles from './Tasks.module.css';
-import { TaskSingle } from './TaskSingle';
-import { TaskEmpty } from './TaskEmpty';
 
 export function Tasks() {
     return (
-        <div className={styles.content}>
-            <header>
-                <div className={styles.info}>
-                    <h3>Tarefas criadas</h3>
-                    <div className={styles.counter}>
-                        <span>0</span>
-                    </div>
-                </div>
+        <div className={styles.tasksContent}>
+            <div className={styles.taskSingle}>
+                <input type="checkbox" />
+                <label htmlFor="">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</label>
+                <button title='Deletar Tarefa'>
+                    <Trash size={24} />
+                </button>
+            </div>
 
-                <div className={styles.info}>
-                    <h3>Concluídas</h3>
-                    <div className={styles.counter}>
-                        <span>0</span>
-                    </div>
-                </div>
-            </header>
+            <div className={styles.taskSingle}>
+                <input type="checkbox" />
+                <label htmlFor="">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</label>
+                <button title='Deletar Tarefa'>
+                    <Trash size={24} />
+                </button>
+            </div>
 
-            {/* <TaskEmpty /> */}
+            <div className={styles.taskSingle}>
+                <input type="checkbox" />
+                <label htmlFor="">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</label>
+                <button title='Deletar Tarefa'>
+                    <Trash size={24} />
+                </button>
+            </div>
 
-
-            <TaskSingle />
-
+            <div className={styles.taskSingle}>
+                <input type="checkbox" />
+                <label htmlFor="">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</label>
+                <button title='Deletar Tarefa'>
+                    <Trash size={24} />
+                </button>
+            </div>
         </div>
     )
 }
