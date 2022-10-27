@@ -1,31 +1,10 @@
-import { useEffect, useState } from 'react';
-import { pathApi, token } from '../App';
 import styles from './Counter.module.css';
 
-interface Task {
-    id: number;
-    label: string;
-    is_complete: boolean;
+interface CounterProps {
+    amount: number;
+    completeTasks: number;
 }
-
-export function Counter() {
-    const [tasks, setTasks] = useState<Task[]>([]);
-    const amount = tasks.length;
-
-    useEffect(() => {
-        fetch(pathApi + 'tasks', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'Authorization': 'Bearer ' + token,
-            }
-        })
-            .then(response => response.json())
-            .then(data => setTasks(data.data))
-    }, []);
-
-    const completeTasks = tasks.filter(complete => complete.is_complete).length
+export function Counter({ amount, completeTasks }: CounterProps) {
 
     return (
         <header className={styles.headerCounter}>
